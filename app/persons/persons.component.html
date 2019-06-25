@@ -1,0 +1,27 @@
+<h1>Persons</h1>
+
+Name <br />
+<input type="text" #name />
+<p></p>
+Mobile <br />
+<input type="text" #mobile />
+<p></p>
+<button (click)="addPerson(name.value,mobile.value)">Add</button>
+
+<p></p>
+
+<table  width="100%" border="1">
+    <tr>
+        <th>Name</th>
+        <th>Mobile</th>
+        <th>&nbsp;</th>
+    </tr>
+    <tr *ngFor="let p of persons">
+        <td>{{p.name}}</td>
+        <td>{{p.mobile}}</td>
+        <td style="text-align: center">
+                         <button (click)="deletePerson(p.name)">Delete</button>
+        </td>
+    </tr>
+
+</table>

@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
 })
 export class HelloComponent {
    message = 'Hello Angular';
+
+   wish(name : string) {
+     this.message = "Hello, " + name
+   }
 }
