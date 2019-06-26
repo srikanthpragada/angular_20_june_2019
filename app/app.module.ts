@@ -1,17 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HelloComponent } from './hello.component';
-import { PersonsComponent } from './persons/persons.component';
+import { BindingComponent } from './binding/binding.component';
 
 @NgModule({
   declarations: [
-       HelloComponent,
-       PersonsComponent
+       BindingComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [PersonsComponent]
+  bootstrap: [BindingComponent]
 })
 export class AppModule { }

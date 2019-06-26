@@ -1,0 +1,24 @@
+<style>
+  .banner {font-size:30pt;color:red}
+</style>
+
+<h1 [innerHTML]="today"></h1>
+
+<h1>{{today}}</h1>
+
+<input type="text"  [attr.value]="today" />
+
+<input type="checkbox"  [checked]="isMarried" />Married 
+<p></p>
+
+Show Banner <input type="checkbox"  (click)="null" #banner/>
+
+<div [class.banner]="banner.checked">Srikanth Technologies</div>
+
+<div [style.color]="banner.checked ? 'green' : 'red' ">Style Binding Demo</div>
+
+<div (mousemove) ="showMouse($event)">
+    This is a simple DIV
+    <p></p>
+    This is second line
+</div>
