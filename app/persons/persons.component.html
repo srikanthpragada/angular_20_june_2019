@@ -1,3 +1,7 @@
+<style>
+  .oddrow { background-color: lightgray}
+</style>
+
 <h1>Persons</h1>
 
 Name <br />
@@ -16,7 +20,8 @@ Mobile <br />
         <th>Mobile</th>
         <th>&nbsp;</th>
     </tr>
-    <tr *ngFor="let p of persons;let i = index">
+    <tr *ngFor="let p of persons;let i = index; let oddRow = odd"
+            [class.oddrow]= "oddRow">
         <td>{{p.name}}</td>
         <td>{{p.mobile}}</td>
         <td style="text-align: center">

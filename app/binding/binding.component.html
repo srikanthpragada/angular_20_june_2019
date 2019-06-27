@@ -1,5 +1,6 @@
 <style>
-  .banner {font-size:30pt;color:red}
+  .banner {font-size:30pt;}
+  .bright {color:red}
 </style>
 
 <h1 [innerHTML]="today"></h1>
@@ -22,3 +23,13 @@ Show Banner <input type="checkbox"  (click)="null" #banner/>
     <p></p>
     This is second line
 </div>
+
+<div [ngClass]="{'banner' : false, 'bright':true}">Attribute Binding</div>
+
+<!-- Directives Demo-->
+
+<h2 *ngIf="false; else falseblock">True Block</h2>
+<ng-template #falseblock>
+  <h3>False block</h3>
+</ng-template>
+
