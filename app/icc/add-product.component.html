@@ -1,0 +1,11 @@
+<h3>Add New Product</h3>
+Product Name <br/>
+<input type="text" #pname size="20" required/>
+<p></p>
+Product Price <br/>
+<input type="text" #pprice size="10" />
+<p></p>
+<input type="checkbox" #poffer>In Offer?
+<p></p>
+<button (click)="addProduct(pname.value, pprice.value, poffer.checked)">Add Product</button>
+
