@@ -1,21 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FirstComponent } from './icc/first.component';
-import { SecondComponent } from './icc/second.component';
-import { ProductsListComponent } from './icc/products-list.component';
-import { ProductDetailsComponent } from './icc/product-details.component';
-
+import { FormsModule } from '@angular/forms';
+import { UseStackComponent } from './services/usestack.component';
+import { StackComponent } from './services/stack.component';
+import { StackService } from './services/stack.service';
+import { RegisterComponent } from './forms/register.component';
 
 @NgModule({
   declarations: [
-       ProductsListComponent,
-       ProductDetailsComponent
-
+        UseStackComponent,StackComponent,
+        RegisterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
-  bootstrap: [ProductsListComponent]
+  bootstrap: [RegisterComponent]
 })
 export class AppModule { }
