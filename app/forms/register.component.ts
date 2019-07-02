@@ -11,9 +11,13 @@ export class RegisterComponent implements OnInit {
     age : number;
 
     constructor() {
-        this.uname = "Scott";
-        this.age= 30;
+        // this.uname = "Scott";
+        // this.age= 30;
      }
 
     ngOnInit(): void { }
+
+    register(form){
+        console.log(form.form)
+    }
 }
