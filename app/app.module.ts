@@ -1,21 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UseStackComponent } from './services/usestack.component';
 import { StackComponent } from './services/stack.component';
 import { StackService } from './services/stack.service';
-import { RegisterComponent } from './forms/register.component';
+import { RLoginComponent } from './forms/rlogin.component';
 
 @NgModule({
   declarations: [
-        UseStackComponent,StackComponent,
-        RegisterComponent
+     RLoginComponent    
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [RegisterComponent]
+  bootstrap: [RLoginComponent]
 })
 export class AppModule { }
