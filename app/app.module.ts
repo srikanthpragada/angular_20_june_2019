@@ -1,21 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { UseStackComponent } from './services/usestack.component';
-import { StackComponent } from './services/stack.component';
-import { StackService } from './services/stack.service';
-import { RLoginComponent } from './forms/rlogin.component';
+import { HttpClientModule} from '@angular/common/http';
+import { FormsModule} from '@angular/forms';
+import { WebBooksComponent } from './http/webbooks.component';
+import { AddBookComponent } from './http/add-book.component';
+
 
 @NgModule({
   declarations: [
-     RLoginComponent    
+      WebBooksComponent,
+      AddBookComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    ReactiveFormsModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
-  bootstrap: [RLoginComponent]
+  bootstrap: [AddBookComponent, WebBooksComponent  ]
 })
 export class AppModule { }
