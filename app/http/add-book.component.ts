@@ -20,6 +20,7 @@ export class AddBookComponent {
           // call restful service  
           this.done = false;
           this.added = false; 
+          
           this.http.post("http://test.srikanthpragada.com/api/books", this.book)
             .pipe( 
                  finalize(() => {this.done = true}) 

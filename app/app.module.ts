@@ -2,21 +2,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule} from '@angular/common/http';
 import { FormsModule} from '@angular/forms';
-import { WebBooksComponent } from './http/webbooks.component';
-import { AddBookComponent } from './http/add-book.component';
+
+import { WebBooks2Component } from './http/webbooks2.component.';
+import { BooksService } from './services/BooksService';
 
 
 @NgModule({
   declarations: [
-      WebBooksComponent,
-      AddBookComponent
+       WebBooks2Component      
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
-  bootstrap: [AddBookComponent, WebBooksComponent  ]
+  providers: [BooksService],
+  bootstrap: [WebBooks2Component]
 })
 export class AppModule { }
